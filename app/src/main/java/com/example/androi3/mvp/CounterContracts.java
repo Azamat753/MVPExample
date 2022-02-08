@@ -1,4 +1,4 @@
-package com.example.androi3;
+package com.example.androi3.mvp;
 
 public class CounterContracts {
     interface CounterView {

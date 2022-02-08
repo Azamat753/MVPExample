@@ -1,4 +1,4 @@
-package com.example.androi3;
+package com.example.androi3.mvp;
 
 public class CounterData {
     private int value = 0;

@@ -1,10 +1,12 @@
-package com.example.androi3;
+package com.example.androi3.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
+
+import com.example.androi3.R;
 
 public class MainActivity extends AppCompatActivity {
 

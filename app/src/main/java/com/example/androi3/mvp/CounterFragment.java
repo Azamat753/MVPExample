@@ -1,4 +1,4 @@
-package com.example.androi3;
+package com.example.androi3.mvp;
 
 import android.os.Bundle;
 
@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 
 import android.view.View;
 
+import com.example.androi3.base.BaseFragment;
 import com.example.androi3.databinding.FragmentCounterBinding;
 
 public class CounterFragment extends BaseFragment<FragmentCounterBinding> implements CounterContracts.CounterView {

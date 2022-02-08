@@ -1,4 +1,4 @@
-package com.example.androi3;
+package com.example.androi3.base;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,9 +10,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewbinding.ViewBinding;
 
-abstract class BaseFragment<VB extends ViewBinding> extends Fragment {
+public abstract class BaseFragment<VB extends ViewBinding> extends Fragment {
 
-    protected VB binding;
+    public VB binding;
     protected abstract VB bind();
 
     @Nullable
