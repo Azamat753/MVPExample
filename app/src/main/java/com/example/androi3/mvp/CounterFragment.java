@@ -4,9 +4,12 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import android.view.View;
+import android.widget.Toast;
 
+import com.example.androi3.R;
 import com.example.androi3.base.BaseFragment;
 import com.example.androi3.databinding.FragmentCounterBinding;
 
@@ -26,15 +29,13 @@ public class CounterFragment extends BaseFragment<FragmentCounterBinding> implem
         binding.incrementBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                presenter.changeColor();
+                presenter.congratulation();
                 presenter.increaseCounter();
             }
         });
-        binding.decrementBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                presenter.decrement();
-            }
-        });
+
+        binding.decrementBtn.setOnClickListener(view -> presenter.decrement());
     }
 
     @Override
@@ -51,5 +52,15 @@ public class CounterFragment extends BaseFragment<FragmentCounterBinding> implem
     @Override
     public void updateCounter(int count) {
         binding.counterTv.setText(String.valueOf(count));
+    }
+
+    @Override
+    public void tenCount() {
+        Toast.makeText(requireContext(), "10!!!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void greenText() {
+        binding.counterTv.setTextColor(ContextCompat.getColor(requireContext(),R.color.green));
     }
 }

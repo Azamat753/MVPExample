@@ -29,4 +29,18 @@ public class CounterPresenter implements CounterContracts.Presenter {
         counterData.decrement();
         counterView.updateCounter(counterData.getValue());
     }
+
+    @Override
+    public void congratulation() {
+        if (counterData.getValue() == 10) {
+            counterView.tenCount();
+        }
+    }
+
+    @Override
+    public void changeColor() {
+        if (counterData.getValue() == 20) {
+            counterView.greenText();
+        }
+    }
 }
